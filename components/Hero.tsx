@@ -1,0 +1,69 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowUpRight, Play } from "lucide-react";
+
+export default function Hero() {
+  return (
+    <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-20 pb-20 text-center ">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.15 }}
+        className="mb-7  rounded-full bg-white/15 p-1 px-4 text-[13px] font-medium text-white backdrop-blur-sm"
+      >
+        {/* <span className="rounded-full bg-white px-3 py-1 text-brand-600">
+        
+        </span> */}
+        <span className="text-white/90"> Cameroon Fintech Lab</span>
+      </motion.div>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}
+        className="text-[42px] font-semibold leading-[1.12] tracking-tight text-white sm:text-6xl"
+      >
+       Working Towards a Better 
+        <br />
+      Financial System for Cameroon.
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mx-auto mt-6 max-w-lg text-[15px] leading-relaxed text-white/70"
+      >
+        An independent think tank focused on financial innovation, regulatory engagement, and building practical infrastructure that helps Cameroon's fintech sector grow — responsibly.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.55 }}
+        className="mt-9 flex items-center gap-3"
+      >
+        <motion.button
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink-900 shadow-lg shadow-black/10"
+        >
+          Get Our Initiatives
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-ink-900 text-white">
+            <ArrowUpRight size={12} strokeWidth={2.5} />
+          </span>
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          className="flex items-center gap-2 rounded-full bg-white/15 px-5 py-3 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/25"
+        >
+          <Play size={14} fill="currentColor" />
+         Who we are
+        </motion.button>
+      </motion.div>
+    </div>
+  );
+}

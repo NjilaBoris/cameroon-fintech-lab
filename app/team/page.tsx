@@ -20,47 +20,48 @@ type Author = {
 const authors: Author[] = [
   {
     id: "anna-williams",
-    name: "Anna Williams",
-    specialty: "Personal Finance and Stocks",
-    image: "https://i.pravatar.cc/600?img=47",
+    name: "Abdel Oumar El-bashi",
+    specialty: "Digital Communications Specialist",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHBrDYLPKETfw/profile-displayphoto-scale_400_400/B4DZndaxh3H4Ag-/0/1760356408846?e=1785369600&v=beta&t=OHrzQe2-r8czD_HFYa6PFKNUiuxZkTXTy0ZTwyzpuAk",
   },
   {
     id: "chris-evans",
-    name: "Chris Evans",
-    specialty: "Real Estate and Urban Development",
-    image: "https://i.pravatar.cc/600?img=13",
+    name: "Foti Georges",
+    specialty: "Senior Software Engineer | FinTech Professional",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGDJAXe3_fF7A/profile-displayphoto-shrink_400_400/B56ZcdjxELHUAg-/0/1748547606287?e=1785369600&v=beta&t=LoM3Kc7OAlHu6oIQARKgYDz44c14-wz2tkxPT32elcw",
   },
   {
     id: "daniel-nguyen",
-    name: "Daniel Nguyen",
-    specialty: "Space Exploration and Technology",
-    image: "https://i.pravatar.cc/600?img=53",
+    name: "Emmanuel Babila",
+    specialty: "FinTech Architect | MSc Financial Technology",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQHuc5dV6y0ksA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728238140441?e=1785369600&v=beta&t=-T020v2F5RtEZVPclFjzizYxJsJWspxtRBHl1hN4j3M",
   },
   {
     id: "david-brown",
-    name: "David Brown",
-    specialty: "Sports and Fitness",
+    name: "Dr. Malucha Walter Chama",
+    specialty: "Advisor, Carbon Markets & Climate Finance",
     image: "https://i.pravatar.cc/600?img=52",
   },
   {
     id: "emily-davis",
-    name: "Emily Davis",
-    specialty: "Health, Science and Technology",
+    name: "Dr. Christiana Mbogue",
+    specialty: "Advisor, Ecology, Environmental Science & Climate Finance | Chair, Finance Committee",
     image: "https://i.pravatar.cc/600?img=32",
   },
   {
     id: "james-carter",
-    name: "James Carter",
-    specialty: "Economics, Business and Finance",
+    name: "Njila Boris",
+    specialty: "Webmaster",
     image: "https://i.pravatar.cc/600?img=59",
   },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 32, filter: "blur(20px)" },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: i * 0.09 },
   }),
 };
@@ -107,7 +108,7 @@ function AuthorCard({ author, index }: { author: Author; index: number }) {
         <img
           src={author.image}
           alt={author.name}
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          className="h-full grayscale hover:grayscale-0 transition duration-500 ease-in-out  w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"
         />
       </div>
@@ -130,36 +131,27 @@ export default function TeamSection() {
   const introInView = useInView(introRef, { once: true, margin: "-15% 0px" });
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <section className="w-full px-4 sm:px-6 mt-22 lg:px-8 py-20 sm:py-16">
+      <span className=" text-center font-bold text-neutral-600  w-full font-bold flex items-center pb-4 justify-center mx-auto text-4xl">The People Behind the Work</span>
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-12">
+        
         {/* Intro copy */}
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 16 }}
           animate={introInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:sticky lg:top-24 lg:self-start"
+          className="lg:sticky lg:top-37 lg:self-start"
         >
+          
           <div className="space-y-4 text-sm leading-relaxed text-neutral-600">
             <p>
-              Our team of authors at NewsFlash is composed of professionals
+              Our team  is composed of professionals
               from diverse backgrounds, each bringing their unique expertise
               from various industries.
             </p>
             <p>
-              With decades of collective experience, they have penned
-              articles that have reached millions of readers worldwide.
-              Their work spans topics from breaking news to in-depth
-              features, consistently delivering high-quality journalism
-              that informs and engages audiences.
-            </p>
-            <p>
-              Many of our authors have been recognized with prestigious
-              awards, further underscoring their commitment to excellence
-              in writing. Whether covering global events, investigative
-              stories, or cultural phenomena, our authors ensure that
-              every article meets the highest standards of accuracy,
-              insight, and impact.
+             We bring together people with backgrounds in financial regulation, credit infrastructure, technology, and economic development — all focused on the same set of problems.
             </p>
           </div>
         </motion.div>

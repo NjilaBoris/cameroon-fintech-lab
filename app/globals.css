@@ -161,7 +161,7 @@
     @apply font-sans;
   }
 }
-@utility hero-gradient {
+/* @utility hero-gradient {
   background:
     radial-gradient(120% 140% at 15% 0%, rgba(255, 255, 255, 0.16), transparent 55%),
     radial-gradient(90% 120% at 85% 15%, rgba(255, 255, 255, 0.12), transparent 50%),
@@ -173,4 +173,4 @@
     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 44px 44px;
-}
+} */

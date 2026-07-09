@@ -7,13 +7,13 @@ const links = ["Home", "About", "Initiatives", "Events", "Team", "Research & Pol
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 z-20 w-full border-b border-white/10  backdrop-blur-sm">
+    <div className="fixed top-5 z-20 w-full border-b border-white/10  backdrop-blur-sm">
 
     <header
-      className=" z-20 relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6"
+      className=" z-20 relative mx-auto flex w-full rounded-full bg-[#1B1B1B] max-w-6xl items-center justify-between px-6 py-6"
     >
       <div className="flex items-center gap-2.5">
-        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-600 shadow-sm">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#C8F701] text-dark shadow-sm">
           <Waves size={18} strokeWidth={2.4} />
         </span>
         <span className="text-[13px] font-semibold tracking-tight text-white uppercase">
@@ -43,7 +43,7 @@ export default function Navbar() {
       </nav>
 
       <div className="flex items-center gap-2">
-        <button className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20">
+        <button className="rounded-full bg-[#C8F701] px-4 py-2 text-sm font-medium  backdrop-blur-sm transition hover:bg-[#C8F701]/20">
          GET INVOLVED
         </button>
         {/* <button className="rounded-full bg-ink-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-black">

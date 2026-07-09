@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, bricolageGrotesque.className, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#F9F9F9]">
         <Navbar/>
         {children}</body>
     </html>

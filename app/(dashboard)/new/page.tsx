@@ -12,15 +12,6 @@ import LogOutButton from "@/components/LogoutButton";
 import { DeleteArticleButton } from "@/components/DeleteButton";
 
 
-const CATEGORY_LABELS: Record<string, string> = {
-  politics: "Politics",
-  parliament: "Parliament",
-  "local-governance": "Local Governance",
-  elections: "Elections",
-  "economy-society": "Economy & Society",
-  "youth-spotlight": "Youth Spotlight",
-};
-
 export default async function DashboardPage({
   searchParams,
 }: {
@@ -77,9 +68,6 @@ export default async function DashboardPage({
             <div>
               <div className="flex items-center gap-2">
                 <p className="font-medium">{article.title}</p>
-                <span className="rounded-full bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
-                  {CATEGORY_LABELS[article.category] ?? article.category}
-                </span>
                 {!article.published && (
                   <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
                     Draft

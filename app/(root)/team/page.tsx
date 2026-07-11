@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -56,7 +56,7 @@ const authors: Author[] = [
   },
 ];
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32, filter: "blur(20px)" },
   visible: (i: number) => ({
     opacity: 1,
@@ -135,7 +135,7 @@ export default function TeamSection() {
       <span className=" text-center font-bold text-neutral-600  w-full font-bold flex items-center pb-4 justify-center mx-auto text-4xl">The People Behind the Work</span>
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-12">
         
-        {/* Intro copy */}
+       
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 16 }}
@@ -156,7 +156,7 @@ export default function TeamSection() {
           </div>
         </motion.div>
 
-        {/* Author grid */}
+     
         <motion.div
           initial="hidden"
           whileInView="visible"

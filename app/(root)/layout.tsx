@@ -6,14 +6,14 @@ import Nav from "@/components/Nav";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main className="">
+    <>
       <Nav />
 
       <section >
         {children}
       </section>
       <Footer />
-    </main>
+    </>
   );
 };
 

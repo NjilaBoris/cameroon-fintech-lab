@@ -20,20 +20,20 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-3 sm:top-5 z-20 w-full px-3 sm:px-0 border-b border-white/10 backdrop-blur-sm">
-      <header className="z-20 relative mx-auto flex w-full flex-col rounded-2xl lg:rounded-full bg-[#1B1B1B] max-w-6xl px-4 sm:px-6 py-3 sm:py-6">
-        <div className="flex w-full items-center justify-between">
-          <Link href="/" onClick={() => setIsOpen(false)}>
-            <div className="flex items-center gap-2 sm:gap-2.5">
+      <header className="z-20 relative mx-auto flex w-full flex-col rounded-full bg-[#1B1B1B] max-w-6xl px-4 sm:px-6 py-3 sm:py-6">
+        <div className="flex w-full items-center justify-between gap-2">
+          <Link href="/" onClick={() => setIsOpen(false)} className="min-w-0 flex-1 lg:flex-initial">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
               <span className="flex h-7 w-7 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[#C8F701] text-[10px] sm:text-xs font-bold text-[#1B1B1B] shadow-sm">
                 CFL
               </span>
-              <span className="text-[11px] sm:text-[13px] font-semibold tracking-tight text-white uppercase whitespace-nowrap">
+              <span className="hidden lg:block text-[13px] font-semibold tracking-tight text-white uppercase truncate min-w-0">
                 Cameroon Fintech Lab
               </span>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-1 rounded-full bg-white/10 p-1 backdrop-blur-sm lg:flex">
+          <nav className="hidden items-center gap-1 rounded-full bg-white/10 p-1 backdrop-blur-sm lg:flex shrink-0">
             {links.map((link, i) => {
               const isActive = pathname === link.path;
               return (
@@ -45,19 +45,11 @@ export default function Navbar() {
                   {link.name}
                 </Link>
             )}
-              // ) : (
-              //   <Link
-              //     key={link}
-              //     href={`}
-              //     className="rounded-full px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-medium text-white/85 transition hover:text-white whitespace-nowrap"
-              //   >
-              //     {link}
-              //   </Link>
           )}
             
           </nav>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2 shrink-0">
             <button className="rounded-full bg-[#C8F701] px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#C8F701]/80 whitespace-nowrap">
               GET INVOLVED
             </button>

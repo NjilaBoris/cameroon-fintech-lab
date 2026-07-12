@@ -48,25 +48,27 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.55 }}
         className="mt-9 flex items-center gap-3"
       >
-        <motion.button
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-2 rounded-full  hover:bg-[#1B1B1B]/90 text-white px-5 py-3 text-sm font-semibold bg-[#1B1B1B] shadow-lg shadow-black/10"
-        >
-          Get Our Initiatives
-          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1B1B1B] text-white">
-            <ArrowUpRight size={12} strokeWidth={2.5} />
-          </span>
-        </motion.button>
+       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+  <motion.button
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.97 }}
+    className="flex items-center justify-center gap-2 rounded-full hover:bg-[#1B1B1B]/90 text-white px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold bg-[#1B1B1B] shadow-lg shadow-black/10 whitespace-nowrap"
+  >
+    Get Our Initiatives
+    <span className="flex h-4 w-4 sm:h-5 sm:w-5 shrink-0 items-center justify-center rounded-full bg-[#1B1B1B] text-white">
+      <ArrowUpRight size={12} strokeWidth={2.5} />
+    </span>
+  </motion.button>
 
-        <motion.button
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-2 rounded-full bg-[#1B1B1B]/10 px-5  py-3 text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#1B1B1B]/20 hover:text-dark hover:border-none"
-        >
-          <Play size={14} fill="currentColor" />
-         Who we are
-        </motion.button>
+  <motion.button
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.97 }}
+    className="flex items-center justify-center gap-2 rounded-full bg-[#1B1B1B]/10 px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#1B1B1B]/20 hover:text-dark hover:border-none whitespace-nowrap"
+  >
+    <Play size={14} fill="currentColor" />
+    Who we are
+  </motion.button>
+</div>
       </motion.div>
     </div>
   );

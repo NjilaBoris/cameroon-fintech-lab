@@ -19,38 +19,46 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-3 sm:top-5 z-20 w-full overflow-x-hidden px-3 sm:px-4 lg:px-6 border-b border-white/10 backdrop-blur-sm">
-      <header className="z-20 relative mx-auto flex w-full flex-col rounded-full bg-[#1B1B1B] max-w-6xl px-4 sm:px-6 py-3 sm:py-6">
-        <div className="grid w-full grid-cols-2 xl:grid-cols-3 items-center gap-2">
-          <Link href="/" onClick={() => setIsOpen(false)} className="min-w-0 justify-self-start">
-            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+    <div className="fixed top-3 sm:top-5 z-20 w-full px-3 sm:px-0 border-b border-white/10 backdrop-blur-sm">
+      <header className="z-20 relative mx-auto flex w-full flex-col max-w-90 md:max-w-2xl justify-center rounded-2xl lg:rounded-full bg-[#1B1B1B] lg:max-w-6xl px-4 sm:px-6 py-3 sm:py-6">
+        <div className="flex w-full items-center justify-between">
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            <div className="flex items-center gap-2 sm:gap-2.5">
               <span className="flex h-7 w-7 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[#C8F701] text-[10px] sm:text-xs font-bold text-[#1B1B1B] shadow-sm">
                 CFL
               </span>
-              <span className="hidden xl:block text-[13px] font-semibold tracking-tight text-white uppercase truncate min-w-0">
+              <span className="text-[11px] hidden lg:block sm:text-[13px] font-semibold tracking-tight text-white uppercase whitespace-nowrap">
                 Cameroon Fintech Lab
               </span>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-1 rounded-full bg-white/10 p-1 backdrop-blur-sm xl:flex justify-self-center shrink-0">
+          <nav className="hidden items-center gap-1 rounded-full bg-white/10 p-1 backdrop-blur-sm lg:flex">
             {links.map((link, i) => {
               const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`rounded-full ${isActive ? " text-brand-600 bg-white hover:text-brand-600/50" : "text-white/85 hover:text-white/50"}  px-3 xl:px-4 py-1.5 text-xs xl:text-sm font-medium   whitespace-nowrap  transition-all duration-300 `}
+                  className={`rounded-full ${isActive ? " text-brand-600 bg-white hover:text-brand-600/50" : "text-white/85 hover:text-white/50"}  px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-medium   whitespace-nowrap  transition-all duration-300 `}
                 >
                   {link.name}
                 </Link>
             )}
+              // ) : (
+              //   <Link
+              //     key={link}
+              //     href={`}
+              //     className="rounded-full px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-medium text-white/85 transition hover:text-white whitespace-nowrap"
+              //   >
+              //     {link}
+              //   </Link>
           )}
             
           </nav>
 
-          <div className="hidden xl:flex items-center gap-2 justify-self-end shrink-0">
-            <button className="rounded-full bg-[#C8F701] px-3 xl:px-4 py-2 text-xs xl:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#C8F701]/80 whitespace-nowrap">
+          <div className="hidden lg:flex items-center gap-2">
+            <button className="rounded-full bg-[#C8F701] px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#C8F701]/80 whitespace-nowrap">
               GET INVOLVED
             </button>
           </div>
@@ -59,7 +67,7 @@ export default function Navbar() {
             onClick={() => setIsOpen((prev) => !prev)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="flex xl:hidden h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center justify-self-end rounded-full bg-white/10 text-white transition hover:bg-white/20"
+            className="flex lg:hidden h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
           >
             <AnimatePresence mode="wait" initial={false}>
               {isOpen ? (
@@ -96,7 +104,7 @@ export default function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="overflow-hidden xl:hidden"
+              className="overflow-hidden lg:hidden"
             >
               <nav className="flex flex-col gap-1.5 pt-4 pb-1">
                 {links.map((link, i) => (

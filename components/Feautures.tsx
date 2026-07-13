@@ -17,7 +17,7 @@ const item = {
 
 export default function Features() {
   return (
-    <section className="bg-mist py-24">
+    <section className="bg-mist py-8">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

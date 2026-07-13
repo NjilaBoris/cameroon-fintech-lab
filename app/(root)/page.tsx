@@ -5,12 +5,16 @@ import {motion} from 'framer-motion'
 import { MarqueeDemo } from '@/components/MarqueeDemo'
 import Quote from '@/components/Quote'
 import Features from '@/components/Feautures'
+import AboutSection from '@/components/About'
+import LandscapeMarquee from '@/components/TextAnimation'
+import TeamSection from '@/components/Team'
+
 
 
 const Home = () => {
   return (
      <main className="relative overflow-hidden">
-      <div className="hero-gradient grid-overlay relative pt-17  pb-56">
+      <div className="hero-gradient grid-overlay relative pt-17">
         <Hero />
         <div className="pb-4"> 
         <motion.h2  
@@ -21,11 +25,13 @@ const Home = () => {
           <MarqueeDemo />
         </div>
       </div>
-      <div className="relative z-10 -mt-56 pt-7 px-6 pb-20">
-        <Dashboard />
-      </div>
       <Quote/>
+      <div className="relative z-10  pt-7 px-6">
+        <AboutSection/>
+      </div>
       <Features/>
+      <LandscapeMarquee/>
+      <TeamSection/>
     </main>
   )
 }

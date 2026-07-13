@@ -107,26 +107,25 @@ export default function Navbar() {
               className="overflow-hidden lg:hidden"
             >
               <nav className="flex flex-col gap-1.5 pt-4 pb-1">
-                {links.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
+                {links.map((link, i) => {
+                  const isActive = pathname === link.path;
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.25, delay: i * 0.05 }}
                   >
-                    <Link
-                      href={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className={`block rounded-xl px-4 py-2.5 text-sm font-medium transition ${
-                        i === 0
-                          ? "bg-white text-brand-600"
-                          : "text-white/85 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
+                  <Link
+                  key={link.name}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`rounded-full ${isActive ? " text-brand-600 bg-white hover:text-brand-600/50" : "text-white/85 hover:text-white/50"}  px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-medium   whitespace-nowrap  transition-all duration-300 `}
+                >
+                  {link.name}
+                </Link>
                   </motion.div>
-                ))}
+                )})}
 
                 <motion.button
                   initial={{ opacity: 0, x: -10 }}

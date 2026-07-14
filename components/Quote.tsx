@@ -16,19 +16,19 @@ type Stat = {
 const stats: Stat[] = [
   {
     id: "manual-tools",
-    label: "Cameroonians without a formal credit score",
+    label: "Cameroonians without a formal credit score (Bucrep, 2026)",
     value: 28,
     suffix: "M+",
   },
   {
     id: "finance-emails",
-    label: "Adults with access to formal credit",
+    label: "Adults with access to formal credit (NIS, 2017)",
     value: 15,
     suffix: "%",
   },
   {
     id: "lose-track",
-    label: "Estimated SME credit gap",
+    label: "Estimated SME credit gap (BEAC, 2024)",
     value: 4.2,
     suffix: "B",
   },
@@ -74,7 +74,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
       }}
       className="flex flex-col justify-between rounded-2xl border border-neutral-200/70 bg-[#FAF9F7] px-6 py-7 sm:px-7 sm:py-8 min-h-[180px] sm:min-h-[200px]"
     >
-      <p className="text-xs sm:text-sm leading-snug text-neutral-400 max-w-[16ch]">
+      <p className="text-xs sm:text-sm leading-snug text-neutral-400 max-w-[18ch]">
         {stat.label}
       </p>
 

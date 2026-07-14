@@ -2,22 +2,17 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Play } from "lucide-react";
-import VolumeChart from "./VolumeChart";
-import FloatingCards from "./FloatingCards";
+
 
 export default function Hero() {
   return (
     <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-20 pb-20 text-center ">
-            <FloatingCards />
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.15 }}
-        className="mb-7  rounded-full  p-1 px-4 text-[13px] font-medium bg-[#C8F701] backdrop-blur-sm"
+        className="mb-7  rounded-full  p-1 px-4 text-[13px] font-medium bg-[#E8AE45] backdrop-blur-sm"
       >
-        {/* <span className="rounded-full bg-white px-3 py-1 text-brand-600">
-        
-        </span> */}
         <span className="text-[#3A3A3A] font-bold">
            Cameroon Fintech Lab</span>
       </motion.div>

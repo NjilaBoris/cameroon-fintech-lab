@@ -29,8 +29,8 @@ const images = [
   },
 ];
 
-const PHRASE = "CAMEROON\u2014FINTECH\u2014LAB\u2014"; // phrase to repeat in the marquee
-const REPEAT_COUNT = 10; // wide enough to tile across very large screens
+const PHRASE = "CAMEROON\u2014FINTECH\u2014LAB\u2014"; 
+const REPEAT_COUNT = 7;
 
 export default function LandscapeMarquee() {
   const shouldReduceMotion = useReducedMotion();
@@ -49,19 +49,17 @@ export default function LandscapeMarquee() {
             }
             transition={
               shouldReduceMotion
-                ? { duration: 50 }
-                : { duration: 50, ease: "linear", repeat: Infinity }
+                ? { duration: 150 }
+                : { duration: 150, ease: "linear", repeat: Infinity }
             }
           >
             <span
-              style={{ fontFamily: "var(--font-playfair)" }}
               className="pr-6 text-[2.75rem] font-extrabold uppercase leading-none tracking-tight text-[#3A3A3A]  sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8.5rem]"
             >
               {row}
             </span>
             <span
               aria-hidden="true"
-              style={{ fontFamily: "var(--font-playfair)" }}
               className="pr-6 text-[2.75rem] font-extrabold uppercase leading-none tracking-tight text-[#3A3A3A]  sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8.5rem]"
             >
               {row}
@@ -93,12 +91,6 @@ export default function LandscapeMarquee() {
               }}
               className="overflow-hidden rounded-xl shadow-xl ring-1 ring-black/5"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="h-24 w-full object-cover sm:h-32 md:h-40 lg:h-48 xl:h-56"
-              />
             </motion.div>
           </motion.div>
         ))}

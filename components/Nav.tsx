@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex w-full items-center justify-between">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <div className="flex items-center gap-2 sm:gap-2.5">
-              <span className="flex h-7 w-7 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[#C8F701] text-[10px] sm:text-xs font-bold text-[#1B1B1B] shadow-sm">
+              <span className="flex h-7 w-7 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-[#E8AE45] text-[10px] sm:text-xs font-bold text-[#1B1B1B] shadow-sm">
                 CFL
               </span>
               <span className="text-[11px] hidden lg:block sm:text-[13px] font-semibold tracking-tight text-white uppercase whitespace-nowrap">
@@ -58,7 +58,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-2">
-            <button className="rounded-full bg-[#C8F701] px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#C8F701]/80 whitespace-nowrap">
+            <button className="rounded-full bg-[#E8AE45] px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#E8AE45]/80 whitespace-nowrap">
               GET INVOLVED
             </button>
           </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden lg:hidden"
             >
-              <nav className="flex flex-col gap-1.5 pt-4 pb-1">
+              <nav className="flex flex-col w-full gap-1.5 pt-4 pb-1">
                 {links.map((link, i) => {
                   const isActive = pathname === link.path;
                   return (
@@ -115,12 +115,13 @@ export default function Navbar() {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.25, delay: i * 0.05 }}
+                    className=""
                   >
                   <Link
                   key={link.name}
                   href={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`rounded-full ${isActive ? " text-brand-600 bg-white hover:text-brand-600/50" : "text-white/85 hover:text-white/50"}  px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-medium   whitespace-nowrap  transition-all duration-300 `}
+                  className={`rounded-full ${isActive ? " text-brand-600 bg-white hover:text-brand-600/50" : "text-white/85 hover:text-white/50"} flex items-center justify-center  px-3 lg:px-4 py-1.5 text-md md:text-xl font-medium   whitespace-nowrap  transition-all duration-300 uppercase `}
                 >
                   {link.name}
                 </Link>
@@ -132,7 +133,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.25, delay: links.length * 0.05 }}
                   onClick={() => setIsOpen(false)}
-                  className="mt-2 rounded-xl bg-[#C8F701] px-4 py-2.5 text-sm font-medium text-[#1B1B1B] transition hover:bg-[#C8F701]/80"
+                  className="mt-2 rounded-xl bg-[#C8F701] px-4 py-2.5 text-sm md:text-xl font-medium text-[#1B1B1B] transition hover:bg-[#C8F701]/80"
                 >
                   GET INVOLVED
                 </motion.button>

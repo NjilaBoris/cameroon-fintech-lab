@@ -40,7 +40,7 @@ export default function Features() {
         >
           <motion.div variants={item} className="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
             <div className="mb-2 flex items-center justify-between rounded-xl bg-mist p-4">
-              <div className="flex items-center  text-lg  font-bold  text-[#C8F701]">
+              <div className="flex items-center  text-lg  font-bold text-[#E8AE45]">
                  01
               </div>
               
@@ -54,7 +54,7 @@ export default function Features() {
           </motion.div>
           <motion.div variants={item} className="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
             <div className="mb-2 flex items-center justify-between rounded-xl bg-mist p-4">
-              <div className="flex items-center  text-lg  font-bold  text-[#C8F701]">
+              <div className="flex items-center  text-lg  font-bold  text-[#E8AE45]">
                  02
               </div>
               
@@ -68,7 +68,7 @@ export default function Features() {
           </motion.div>
           <motion.div variants={item} className="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
             <div className="mb-2 flex items-center justify-between rounded-xl bg-mist p-4">
-              <div className="flex items-center  text-lg font-medium font-bold  text-[#C8F701]">
+              <div className="flex items-center  text-lg font-medium font-bold  text-[#E8AE45]">
                  03
               </div>
               
@@ -82,7 +82,7 @@ export default function Features() {
           </motion.div>
           <motion.div variants={item} className="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
             <div className="mb-2 flex items-center justify-between rounded-xl bg-mist p-4">
-              <div className="flex items-center  text-lg font-bold  text-[#C8F701]">
+              <div className="flex items-center  text-lg font-bold  text-[#E8AE45]">
                  04
               </div>
               

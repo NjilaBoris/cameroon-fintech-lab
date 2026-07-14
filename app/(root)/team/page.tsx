@@ -34,13 +34,13 @@ const authors: Author[] = [
     id: "daniel-nguyen",
     name: "Emmanuel Babila",
     specialty: "FinTech Architect | MSc Financial Technology",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQHuc5dV6y0ksA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728238140441?e=1785369600&v=beta&t=-T020v2F5RtEZVPclFjzizYxJsJWspxtRBHl1hN4j3M",
+    image: "/babila.jpeg",
   },
   {
     id: "david-brown",
     name: "Dr. Malucha Walter Chama",
     specialty: "Advisor, Carbon Markets & Climate Finance",
-    image: "https://i.pravatar.cc/600?img=52",
+    image: "/Malucha1.jpg",
   },
   {
     id: "emily-davis",

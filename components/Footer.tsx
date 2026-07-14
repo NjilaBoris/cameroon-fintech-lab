@@ -39,7 +39,6 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-[#1B1B1B] px-6 py-16">
       <div className="mx-auto max-w-6xl">
-        {/* Top: Brand + Newsletter */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -50,7 +49,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <Link href="/">
               <div className="flex items-center gap-2.5">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#C8F701] text-[#1B1B1B] shadow-sm">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#E8AE45] text-[#1B1B1B] shadow-sm">
                   CFL
                 </span>
                 <span className="text-[13px] font-semibold tracking-tight text-white uppercase">
@@ -79,7 +78,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#C8F701] text-[#1B1B1B] transition hover:bg-[#C8F701]/80"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E8AE45] text-[#1B1B1B] transition hover:bg-[#E8AE45]/80"
                 aria-label="Subscribe"
               >
                 <ArrowRight className="h-4 w-4" />
@@ -88,7 +87,6 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Middle: Link columns */}
         <div className="grid grid-cols-2 gap-10 py-12 sm:grid-cols-3 md:grid-cols-4">
           {Object.entries(footerLinks).map(([title, links], colIndex) => (
             <motion.div
@@ -140,7 +138,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom bar */}
+      
         <motion.div
           initial="hidden"
           whileInView="visible"

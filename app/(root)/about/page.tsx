@@ -179,7 +179,7 @@ export default function AboutPage() {
             custom={0.25}
             className="mt-8 max-w-2xl text-base sm:text-lg  leading-relaxed font-light"
           >
-            An independent think tank building a more inclusive and well-regulated
+            An independent (self-funded) think tank building a more inclusive and well-regulated
             financial system for Cameroon and the wider CEMAC region —
             one practical initiative at a time.
           </motion.p>

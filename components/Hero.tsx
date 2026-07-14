@@ -34,7 +34,7 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mx-auto mt-6 max-w-lg text-[#6B6B6D] text-[15px] leading-relaxed"
       >
-        An independent think tank focused on financial innovation, regulatory engagement, and building practical infrastructure that helps Cameroon's fintech sector grow — responsibly.
+        An independent (self-funded) think tank focused on financial innovation, regulatory engagement, and building practical infrastructure that helps Cameroon's fintech sector grow — responsibly.
       </motion.p>
 
       <motion.div

@@ -15,7 +15,7 @@ import { IconBrandFacebook } from '@tabler/icons-react';
 
 const footerLinks = {
   Company: ["About", "Initiatives", "Events", "Team"],
-  Resources: ["Research & Policy", "Blog", "Careers", "FAQs"],
+  Resources: ["Research & Policy", "Events",],
   Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
 };
 
@@ -158,7 +158,7 @@ export default function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="flex h-8 w-8 items-center justify-center rounded-full text-white/70 transition hover:bg-[#C8F701] hover:text-[#1B1B1B]"
+                className="flex h-8 w-8 items-center justify-center rounded-full text-white/70 transition hover:bg-[#E8AE45] hover:text-[#1B1B1B]"
               >
                 <Icon className="h-4 w-4" />
               </Link>

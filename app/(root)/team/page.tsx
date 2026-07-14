@@ -46,13 +46,13 @@ const authors: Author[] = [
     id: "emily-davis",
     name: "Dr. Christiana Mbogue",
     specialty: "Advisor, Ecology, Environmental Science & Climate Finance | Chair, Finance Committee",
-    image: "https://i.pravatar.cc/600?img=32",
+    image: "/dr.jpg",
   },
   {
     id: "james-carter",
     name: "Njila Boris",
     specialty: "Webmaster",
-    image: "https://i.pravatar.cc/600?img=59",
+    image: "/nb.svg",
   },
 ];
 

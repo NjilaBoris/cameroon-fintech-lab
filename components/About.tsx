@@ -50,7 +50,7 @@ export default function AboutSection() {
             style={{ fontFamily: "var(--font-playfair)" }}
             className="text-[#161616] text-xl leading-snug sm:text-2xl sm:leading-snug md:text-[1.75rem] md:leading-snug lg:text-3xl lg:leading-snug"
           >
-            An independent think tank focused on building a more inclusive and well-regulated financial system for Cameroon and the wider CEMAC region — one practical initiative at a time.
+            An independent (self-funded) think tank focused on building a more inclusive and well-regulated financial system for Cameroon and the wider CEMAC region — one practical initiative at a time.
           </motion.p>
 
           <motion.div variants={fadeUp}>

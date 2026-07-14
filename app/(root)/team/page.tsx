@@ -141,7 +141,7 @@ export default function TeamSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={introInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:sticky lg:top-37 lg:self-start"
+          className="lg:sticky lg:top-38 lg:self-start"
         >
           
           <div className="space-y-4 text-sm leading-relaxed text-neutral-600">

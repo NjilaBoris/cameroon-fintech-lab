@@ -376,7 +376,7 @@ export default function AboutPage() {
                 
                 <div className="absolute top-0 left-0 w-0 h-0.5 bg-[#E8AE45] transition-all duration-300 group-hover:w-full" />
 
-                <div className="text-2xl mb-4">{p.icon}</div>
+                <div className="text-2xl mb-4 text-[#E8AE45]">{p.icon}</div>
                 <h3 className="text-[#0B1D3A] font-medium text-lg mb-3">{p.label}</h3>
                 <p className="text-[#3D5068] text-sm leading-relaxed font-light">{p.body}</p>
               </motion.div>

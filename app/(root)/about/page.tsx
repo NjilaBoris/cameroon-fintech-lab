@@ -4,9 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform, easeOut } from "framer-motion";
 import { IconBrain, IconMapPin, IconShield, IconSparkle, IconWorld } from "@tabler/icons-react";
 
-/* ------------------------------------------------------------------ */
-/* Animation variants                                                   */
-/* ------------------------------------------------------------------ */
+
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
   show: (delay = 0) => ({
@@ -31,9 +29,7 @@ const stagger = {
   },
 };
 
-/* ------------------------------------------------------------------ */
-/* Animated counter                                                     */
-/* ------------------------------------------------------------------ */
+
 function Counter({
   target,
   suffix = "",
@@ -153,7 +149,7 @@ export default function AboutPage() {
             initial="hidden"
             animate="show"
             custom={0}
-            className="text-[#00A878] text-xs sm:text-sm font-mono tracking-[0.25em] uppercase mb-6"
+            className="text-[#E8AE45] text-xs sm:text-sm font-mono tracking-[0.25em] uppercase mb-6"
           >
             About Us
           </motion.p>
@@ -167,7 +163,7 @@ export default function AboutPage() {
           >
             Independent.{" "}
             <br className="hidden sm:block" />
-            <span className="text-[#00A878]">Evidence-Driven.</span>
+            <span className="text-[#E8AE45]">Evidence-Driven.</span> {" "}
             <br className="hidden sm:block" />
             Focused on Cameroon.
           </motion.h1>
@@ -203,7 +199,7 @@ export default function AboutPage() {
       <Section className="mx-auto max-w-5xl px-6 sm:px-10 py-24 sm:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
           <div>
-            <p className="text-[#00A878] text-xs font-mono tracking-[0.2em] uppercase mb-3">
+            <p className="text-[#E8AE45] text-xs font-mono tracking-[0.2em] uppercase mb-3">
               Our Mission
             </p>
             <h2 className="text-3xl sm:text-4xl font-extralight leading-tight text-[#0B1D3A]">
@@ -221,7 +217,7 @@ export default function AboutPage() {
               clear compliance frameworks, and open finance protocols — remain underdeveloped.
               The Cameroon FinTech Lab exists to help close those gaps.
             </p>
-            <div className="border-l-2 border-[#00A878] pl-6 space-y-3 mt-8">
+            <div className="border-l-2 border-[#E8AE45] pl-6 space-y-3 mt-8">
               {[
                 ["Innovators", "Insights, data, and prototypes that accelerate fintech solutions."],
                 ["Regulators", "Evidence-based policy briefs that balance innovation with stability."],
@@ -248,7 +244,7 @@ export default function AboutPage() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-16"
           >
-            <p className="text-[#00A878] text-xs font-mono tracking-[0.2em] uppercase mb-3">
+            <p className="text-[#E8AE45] text-xs font-mono tracking-[0.2em] uppercase mb-3">
               The Context
             </p>
             <h2 className="text-3xl sm:text-4xl font-extralight  leading-tight">
@@ -280,7 +276,7 @@ export default function AboutPage() {
                     prefix={stat.prefix}
                   />
                 </div>
-                <p className="text-[#00A878] text-xs font-mono tracking-widest uppercase">
+                <p className="text-[#E8AE45] text-xs font-mono tracking-widest uppercase">
                   {stat.note}
                 </p>
                 <p className="text-slate-400 text-sm leading-relaxed font-light">
@@ -290,7 +286,7 @@ export default function AboutPage() {
             ))}
           </motion.div>
 
-          {/* CEMAC badge */}
+          
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -299,7 +295,7 @@ export default function AboutPage() {
             custom={0.3}
             className="mt-8 flex items-center gap-4 p-6 rounded-xl border border-white/10"
           >
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#00A878]/20 flex items-center justify-center text-[#00A878] text-lg">
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#E8AE45]/20 flex items-center justify-center text-[#E8AE45] text-lg">
               <IconWorld stroke={2} />
             </div>
             <div>
@@ -315,7 +311,7 @@ export default function AboutPage() {
       <Section className="mx-auto max-w-5xl px-6 sm:px-10 py-24 sm:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
           <div>
-            <p className="text-[#00A878] text-xs font-mono tracking-[0.2em] uppercase mb-3">
+            <p className="text-[#E8AE45] text-xs font-mono tracking-[0.2em] uppercase mb-3">
               Our Approach
             </p>
             <h2 className="text-3xl sm:text-4xl font-extralight leading-tight text-[#0B1D3A]">
@@ -338,8 +334,8 @@ export default function AboutPage() {
                 custom={i * 0.08}
                 className="flex gap-6 items-start"
               >
-                <div className="flex-shrink-0 w-7 h-7 rounded-full border border-[#00A878] flex items-center justify-center mt-0.5">
-                  <span className="text-[#00A878] text-xs font-mono">{i + 1}</span>
+                <div className="flex-shrink-0 w-7 h-7 rounded-full border border-[#E8AE45] flex items-center justify-center mt-0.5">
+                  <span className="text-[#E8AE45] text-xs font-mono">{i + 1}</span>
                 </div>
                 <div>
                   <p className="text-[#0B1D3A] font-medium mb-1">{step}</p>
@@ -354,7 +350,7 @@ export default function AboutPage() {
       <section className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-5xl px-6 sm:px-10">
           <Section className="mb-16">
-            <p className="text-[#00A878] text-xs font-mono tracking-[0.2em] uppercase mb-3">
+            <p className="text-[#E8AE45] text-xs font-mono tracking-[0.2em] uppercase mb-3">
               Our Principles
             </p>
             <h2 className="text-3xl sm:text-4xl font-extralight text-[#0B1D3A] leading-tight">
@@ -378,7 +374,7 @@ export default function AboutPage() {
                 className="group relative rounded-2xl border border-zinc-100 bg-[#F7F5F0] p-8 cursor-default overflow-hidden"
               >
                 
-                <div className="absolute top-0 left-0 w-0 h-0.5 bg-[#00A878] transition-all duration-300 group-hover:w-full" />
+                <div className="absolute top-0 left-0 w-0 h-0.5 bg-[#E8AE45] transition-all duration-300 group-hover:w-full" />
 
                 <div className="text-2xl mb-4">{p.icon}</div>
                 <h3 className="text-[#0B1D3A] font-medium text-lg mb-3">{p.label}</h3>
@@ -390,7 +386,7 @@ export default function AboutPage() {
       </section>
 
     
-      <section className="relative  py-32 sm:py-40 overflow-hidden">
+      <section className="relative  py-20 sm:py-40 overflow-hidden">
         
 
         <motion.div
@@ -400,13 +396,13 @@ export default function AboutPage() {
           viewport={{ once: true, margin: "-60px" }}
           className="relative z-10 mx-auto max-w-3xl px-6 sm:px-10 text-center"
         >
-          <p className="text-[#00A878] text-xs font-mono tracking-[0.2em] uppercase mb-6">
+          <p className="text-[#E8AE45] text-xs font-mono tracking-[0.2em] uppercase mb-6">
             Our Vision
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extralight  leading-[1.2]">
             To position Cameroon as a leading think tank for inclusive digital finance
             in{" "}
-            <span className="text-[#00A878]">Central Africa.</span>
+            <span className="text-[#E8AE45]">Central Africa.</span>
           </h2>
           <p className="mt-8 text-slate-400 text-base sm:text-lg font-light leading-relaxed">
             By fostering innovation, bridging structural barriers, and building collaborative

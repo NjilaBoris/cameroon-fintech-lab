@@ -41,7 +41,7 @@ export default async function Home({
 
       <div className="pt-15">
         <div className="mx-auto max-w-6xl px-6 sm:px-10 py-16 sm:py-20">
-          <p className="text-[#00A878] text-xs font-mono tracking-[0.25em] uppercase mb-3">
+          <p className="text-[#3A3A3A] text-xs font-mono tracking-[0.25em] uppercase mb-3">
             Cameroon Fintech Lab
           </p>
           <h1 className="text-4xl sm:text-5xl font-extralight  leading-tight mb-4">

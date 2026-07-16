@@ -1,10 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set");
+      return NextResponse.json(
+        { error: "Server misconfigured. Please contact the site owner." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const { name, contact, email } = await req.json();
 
     if (!name || !contact || !email) {
@@ -22,9 +32,18 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const receiver = process.env.CONTACT_RECEIVER_EMAIL;
+    if (!receiver) {
+      console.error("CONTACT_RECEIVER_EMAIL is not set");
+      return NextResponse.json(
+        { error: "Server misconfigured. Please contact the site owner." },
+        { status: 500 }
+      );
+    }
+
     await resend.emails.send({
       from: "FinTech & Data Chat <onboarding@resend.dev>",
-      to: process.env.CONTACT_RECEIVER_EMAIL!,
+      to: receiver,
       replyTo: email,
       subject: `New Express Interest: ${name}`,
       html: `

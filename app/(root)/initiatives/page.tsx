@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import { useState } from "react";
+import ContactModal from "@/components/Contact";
 
 
 
@@ -70,6 +72,7 @@ function RecurringStamp() {
 }
 
 export default function FintechDataChatInitiative() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="w-full  px-4 py-16 sm:px-8 sm:py-25 mt-6 md:mt-8 md:px-12 lg:mt-10 lg:px-16 lg:py-28">
       <div className="mx-auto max-w-6xl">
@@ -194,18 +197,18 @@ export default function FintechDataChatInitiative() {
               <p className="text-xs sm:text-sm text-[#10131F]/55">
                 Seats are limited to keep the room in dialogue, not lecture.
               </p>
-              <motion.a
-                href="#express-interest"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#10131F] px-6 py-3 text-xs sm:text-sm font-medium tracking-wide text-[#F7F4EC] transition-colors hover:bg-[#10131F]/90"
-              >
-                Express Interest
-              </motion.a>
+             <motion.button
+            onClick={() => setIsModalOpen(true)}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#10131F] px-6 py-3 text-xs sm:text-sm font-medium tracking-wide text-[#F7F4EC] transition-colors hover:bg-[#10131F]/90">
+            Express Interest
+            </motion.button>
             </motion.div>
           </div>
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

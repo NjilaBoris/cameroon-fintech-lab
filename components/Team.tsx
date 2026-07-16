@@ -36,9 +36,9 @@ const team: Member[] = [
     imageAlt: "Emmanuel Babila",
   },
   {
-    role: "BRAND & COPY",
+    role: "ADVISOR",
     name: "Dr. Malucha Walter Chama",
-    bio: "Advisor, Ecology, Environmental Science & Climate Finance | Chair, Finance Committee",
+    bio: "Advisor, Carbon Markets & Climate Finance",
     image: "/Malucha1.jpg",
     imageAlt: "Dr. Malucha Walter Chama",
   },

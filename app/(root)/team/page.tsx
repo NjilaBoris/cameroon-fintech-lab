@@ -52,7 +52,7 @@ const team: TeamMember[] = [
     role: "Advisor, Carbon Markets & Climate Finance",
     category: "Customer Success",
     image: "/Malucha1.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/malucha-walter-chama-421302146/",
+    linkedinUrl: "https://www.linkedin.com/in/malucha-walter-84783b41b/",
     accent: "gradient",
   },
   {

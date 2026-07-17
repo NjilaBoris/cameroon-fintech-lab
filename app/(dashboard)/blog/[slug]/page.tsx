@@ -1,6 +1,8 @@
 // app/(root)/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { getArticleBySlug } from "@/lib/actions/article.action";
 import { ShareSidebar } from "@/components/ShareSideBar";
 import { DownloadPdfButton } from "@/components/DownloadPdfButton";
@@ -17,11 +19,16 @@ export default async function ArticlePage({
 
   return (
     <>
-
       <ShareSidebar title={article.title} slug={article.slug} />
 
-      <main className="mx-auto max-w-3xl px-4 py-10
-        xl:pr-20"> 
+      <main className="mx-auto max-w-3xl px-4 py-10 xl:pr-20">
+        <Link
+          href="/events"
+          className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back
+        </Link>
 
         <div id="article-content">
           {article.coverImage && (
@@ -46,8 +53,7 @@ export default async function ArticlePage({
             {article.content}
           </div>
         </div>
-        <div className="mt-10 flex justify-end border-t border-zinc-100 pt-6 dark:border-zinc-800
-          mb-20 xl:mb-0"> 
+        <div className="mt-10 flex justify-end border-t border-zinc-100 pt-6 dark:border-zinc-800 mb-20 xl:mb-0">
           <DownloadPdfButton title={article.title} contentId="article-content" />
         </div>
       </main>

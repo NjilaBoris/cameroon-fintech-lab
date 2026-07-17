@@ -3,6 +3,7 @@
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { posts } from "@/lib/db/schema";
+import anyAscii from "any-ascii";
 
 import { headers } from "next/headers";
 import { eq, and, asc, desc, count, or, ilike } from "drizzle-orm";
@@ -24,14 +25,15 @@ export type ArticleFormState = {
 
 
 function slugify(title: string) {
-  return title
+  const ascii = anyAscii(title);
+  return ascii
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, "")   
-    .trim()                     
-    .replace(/\s+/g, "-")       
-    .replace(/-+/g, "-")       
-    .replace(/^-|-$/g, "");    
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 async function uniqueSlug(title: string) {

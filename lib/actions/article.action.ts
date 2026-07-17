@@ -24,7 +24,14 @@ export type ArticleFormState = {
 
 
 function slugify(title: string) {
-  return title.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")   
+    .trim()                     
+    .replace(/\s+/g, "-")       
+    .replace(/-+/g, "-")       
+    .replace(/^-|-$/g, "");    
 }
 
 async function uniqueSlug(title: string) {

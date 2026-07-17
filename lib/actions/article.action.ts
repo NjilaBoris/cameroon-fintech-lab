@@ -48,7 +48,6 @@ export async function createArticle(
 
   const title = (formData.get("title") as string)?.trim();
   const content = (formData.get("content") as string)?.trim();
-  const category = formData.get("category") as string;
   const file = formData.get("file") as File | null;
 
   if (!title) return { error: "Title is required" };
@@ -119,7 +118,6 @@ export async function getArticles({
   pageSize = 10,
   sortBy = "createdAt",
   sortOrder = "desc",
-  category,
   publishedOnly = true,
   authorId,
   query,
@@ -203,7 +201,6 @@ export async function updateArticle(
 
   const title = (formData.get("title") as string)?.trim();
   const content = (formData.get("content") as string)?.trim();
-  const category = formData.get("category") as string;
   const file = formData.get("file") as File | null;
 
   if (!title) return { error: "Title is required" };

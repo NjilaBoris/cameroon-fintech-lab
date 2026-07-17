@@ -133,7 +133,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.25, delay: links.length * 0.05 }}
                   onClick={() => setIsOpen(false)}
-                  className="mt-2 rounded-xl bg-[#C8F701] px-4 py-2.5 text-xs md:text-xl font-medium text-[#1B1B1B] transition hover:bg-[#C8F701]/80"
+                  className="rounded-full bg-[#E8AE45] px-3 lg:px-4 py-2 text-xs md:text-lg font-medium text-[#1B1B1B] backdrop-blur-sm transition hover:bg-[#E8AE45]/80 whitespace-nowrap mt-2"
                 >
                   GET INVOLVED
                 </motion.button>
